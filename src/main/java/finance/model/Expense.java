@@ -1,4 +1,16 @@
 package finance.model;
+/*
+ * This represents the financial expense with amount, category, date, and description.
+ * It implements @link Comparable to enable sorting by date. The class includes
+ * validation for:
+ * Positive amount values
+ * Non-empty categories
+ * Valid dates (not null and not in the future)
+ * 
+ * @author Shalom Lule
+ * 5/4/2025
+ * CIS153 final project
+ */
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -14,7 +26,8 @@ public class Expense implements Comparable<Expense> {
 	public Expense() {
 	}
 
-	// Annotated constructor
+	// Annotated constructor for JSON deserialization
+	// This constructor is used by Jackson to create an instance of Expense from JSON data.
 	@JsonCreator
 	public Expense(@JsonProperty("amount") double amount, @JsonProperty("category") String category,
 			@JsonProperty("date") LocalDate date, @JsonProperty("description") String description) {
@@ -37,7 +50,7 @@ public class Expense implements Comparable<Expense> {
 		this.description = description == null ? "" : description;
 	}
 
-	// Getters and setters (required for property-based binding)
+	// Getters and setters for each field
 	public double getAmount() {
 		return amount;
 	}
@@ -70,7 +83,6 @@ public class Expense implements Comparable<Expense> {
 		this.description = description == null ? "" : description;
 	}
 
-	// Rest of your existing methods...
 	@Override
 	public int compareTo(Expense other) {
 		return this.date.compareTo(other.date);

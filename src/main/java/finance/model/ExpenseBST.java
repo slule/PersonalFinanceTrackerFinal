@@ -1,4 +1,18 @@
 package finance.model;
+/**
+ * This is a BST implementation for storing and retrieving expenses added
+ * sorted by date.
+ * This BST provides efficient operations for:
+ * Insertion in O(log n) average time
+ * Date-range queries in O(log n + m) time (where m is results count)
+ * In-order traversal returning sorted expenses
+ * 
+ * The tree maintains expenses in ascending date order.
+ * 
+ * @author Shalom Lule
+ * 5/4/2025
+ * CIS153 final project
+ */
 
 import java.time.LocalDate;
 import java.util.ArrayList;

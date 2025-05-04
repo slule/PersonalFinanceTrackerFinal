@@ -1,4 +1,15 @@
 package finance.ui;
+/**
+ * This is the main graphical user interface for the Personal Finance Tracker.
+ * It creates Tabbed interface for different functionality areas
+ * like for adding new expenses and custiomizing financial reports. 
+ * It also cretes interactive tables for viewing and editing data
+ * 
+ * @author Shalom Lule
+ * 5/4/2025
+ * CIS153 final project
+ * 
+ */
 
 import finance.model.Expense;
 import finance.model.FinanceTracker;
@@ -20,13 +31,13 @@ public class GUIInterface extends JFrame {
 
 	private JTabbedPane tabbedPane;
 
-	// Add Expense Tab
+	// This will Add Expense Tab
 	private JTextField amountField;
 	private JTextField categoryField;
 	private JTextField dateField;
 	private JTextField descField;
 
-	// View Expenses Tab
+	// To View Expenses Tab
 	private JTable expensesTable;
 	private DefaultTableModel expensesTableModel;
 	private JTextField startDateField;
@@ -34,7 +45,7 @@ public class GUIInterface extends JFrame {
 	private JTextField categoryViewField;
 	private ButtonGroup sortButtonGroup;
 
-	// Summary Tab
+	// The summary of the Tab
 	private JTable summaryTable;
 	private DefaultTableModel summaryTableModel;
 
@@ -102,7 +113,7 @@ public class GUIInterface extends JFrame {
 		descField = new JTextField(15);
 		panel.add(descField, gbc);
 
-		// Add Button
+		// Adding a Button
 		gbc.gridx = 0;
 		gbc.gridy = 4;
 		gbc.gridwidth = 2;

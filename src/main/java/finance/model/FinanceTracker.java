@@ -1,5 +1,16 @@
 package finance.model;
-
+/**
+ * This is the controller class that manages the application's data flow between
+ * the UI components, data storage, and business logic.
+ * it facilitates the coordination of:
+ * Expense tracking and categorization
+ * Data persistence operations
+ * Reporting and statistics generation
+ * 
+ * @author Shalom Lule
+ * 5/4/2025
+ * CIS153 final project
+ */
 import finance.persistance.PersistenceManager;
 import java.io.IOException;
 import java.time.LocalDate;
